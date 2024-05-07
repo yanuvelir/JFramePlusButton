@@ -1,5 +1,5 @@
 import  javax.swing.*;
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
@@ -21,16 +21,18 @@ public class Window extends JFrame {
 
         btn2 = new JButton("Close btn");
         add(btn2);
-//        double width = 30;
-//        double height = 50;
-//        btn2.setMixingCutoutShape(new Ellipse2D.Double(20, 20, width, height));
         btn2.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
-                Window.this.dispose();
+                dispose();
             }
         });
-    }
+  //      btn2.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                Window.this.dispose();
+//            }
+//        });
+   }
 
     public class EventHandling implements ActionListener{
 
@@ -40,6 +42,7 @@ public class Window extends JFrame {
             //lbl1.setText("To see some changes, please push the button! ");
             String text = lbl1.getText();
             lbl1.setText(text + text.length());
+            //btn2.setAction();
 
         }
     }
